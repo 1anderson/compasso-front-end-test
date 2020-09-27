@@ -1,0 +1,10 @@
+<div class="row justify-content-center"  *ngIf="state$ | async as state ">
+    <img [src]="state.user.avatar_url"/>
+    <div class="card">
+        <div class="card-body">
+            <h5 class="card-title">{{state.user.name}}</h5>
+            <div class="card-text"><b>Login:</b> {{state.user.login}} <br /> <b>GitHub:</b> {{state.user.html_url}} <br /> <b>Repositórios públicos:</b>
+                {{state.user.public_repos}} <br /> <b>Seguindo:</b> {{state.user.following}} <br /> <b>Seguido:</b> {{state.user.followers}} <br /></div>
+            <a href="#" class="card-link">Voltar</a>
+    </div>
+</div>
