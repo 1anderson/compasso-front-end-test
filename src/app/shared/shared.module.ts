@@ -4,6 +4,7 @@ import { InputSearchComponent } from './components/input-search/input-search.com
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { InterceptorModule } from './interceptor/interceptor.module';
+import { NgbAlertModule } from '@ng-bootstrap/ng-bootstrap/alert/alert.module';
 
 
 @NgModule({

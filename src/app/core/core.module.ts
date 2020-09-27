@@ -6,6 +6,7 @@ import { HomeComponent } from './components/home/home.component';
 import { HeaderComponent } from './components/header/header.component';
 import { SharedModule } from '../shared/shared.module';
 import { UserRoutingModule } from './modules/user/user-routing.module';
+import { AlertsModule } from 'angular-alert-module';
 
 
 @NgModule({
@@ -15,6 +16,7 @@ import { UserRoutingModule } from './modules/user/user-routing.module';
     CoreRoutingModule,
     SharedModule,
     UserRoutingModule,
+    AlertsModule.forRoot(),
   ],
   exports: [HeaderComponent]
 })

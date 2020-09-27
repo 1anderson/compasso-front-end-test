@@ -1,10 +1,20 @@
-<div class="row justify-content-center"  *ngIf="state$ | async as state ">
+<div class="row justify-content-center"  *ngIf="state$ | async as state; else userNotfound">
     <img [src]="state.user.avatar_url"/>
     <div class="card">
         <div class="card-body">
             <h5 class="card-title">{{state.user.name}}</h5>
             <div class="card-text"><b>Login:</b> {{state.user.login}} <br /> <b>GitHub:</b> {{state.user.html_url}} <br /> <b>Repositórios públicos:</b>
                 {{state.user.public_repos}} <br /> <b>Seguindo:</b> {{state.user.following}} <br /> <b>Seguido:</b> {{state.user.followers}} <br /></div>
-            <a href="#" class="card-link">Voltar</a>
+            <a routerLink="/home" class="card-link">Voltar</a>
     </div>
 </div>
+</div>
+
+<ng-template #userNotfound>
+<div class="d-flex align-items-center flex-column">
+    Usuário Não encontrado<br/> 
+   <a routerLink="/home" class="card-link">Voltar</a>
+</div>
+</ng-template>
+
+

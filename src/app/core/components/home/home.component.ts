@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, Component, OnDestroy, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Observable } from 'rxjs';
 import { HomeFacadeService } from '../../services/home-facade/home-facade.service';
@@ -6,9 +6,10 @@ import { HomeFacadeService } from '../../services/home-facade/home-facade.servic
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
-  styleUrls: ['./home.component.scss']
+  styleUrls: ['./home.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class HomeComponent implements OnInit {
+export class HomeComponent implements OnInit , OnDestroy {
   state$: Observable<any>;
   constructor(private homeFacadeService: HomeFacadeService, private router: Router) {}
 
@@ -30,6 +31,10 @@ export class HomeComponent implements OnInit {
 
   redirect(userName: number) {
     this.router.navigateByUrl('/user/' + userName);
+  }
+
+  ngOnDestroy(): void {
+    // this.homeFacadeService.cleanState(); // se o comportamento os dados da pesquisa ao retornar da página de detalhes.
   }
 
 }

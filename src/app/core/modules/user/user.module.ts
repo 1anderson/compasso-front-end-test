@@ -9,7 +9,7 @@ import { UserDetailsComponent } from './components/user-details/user-details.com
   declarations: [UserDetailsComponent],
   imports: [
     CommonModule,
-    UserRoutingModule
+    UserRoutingModule,
   ]
 })
 export class UserModule { }
