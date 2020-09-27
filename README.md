@@ -1,5 +1,10 @@
 # CompassoFrontEndTest
 
+Para rodar o projeto é preciso ter o NodeJS (https://nodejs.org/en/) instalado na versão v12 ou acima dela.
+Ao instalar rode no terminal os comandos "node -v" e "npm -v" , para confirmar se as versões foram instaladas corretamente.
+entre dentro da pasta do projeto e execute no terminal os comando "npm install -g @angular/cli" e logo após o comando "npm install".
+Logo após rode a aplicação com o comando "ng serve" também inserido pelo terminal dentro da pasta do projeto;
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.0.2.
 
 ## Development server
